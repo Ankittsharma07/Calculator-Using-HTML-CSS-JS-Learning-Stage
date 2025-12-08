@@ -1,0 +1,106 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Agar Poppins nahi hai to system font lega */
+}
+
+/* Background aur Centering */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222f3e; /* Dark Blue-Grey Background */
+}
+
+/* Calculator Main Box */
+.calculator {
+    background-color: #1e272e;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5),
+                -15px -15px 30px rgba(255, 255, 255, 0.05);
+    width: 350px;
+}
+
+/* Display Screen Style */
+.display-container {
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 10px 15px;
+    outline: none;
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.5), 
+                inset -5px -5px 10px rgba(255,255,255,0.1);
+}
+
+/* Buttons Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* General Button Style */
+.btn {
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 50%; /* Gol buttons */
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2f3640;
+    color: #f5f6fa;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3), 
+                -5px -5px 10px rgba(255,255,255,0.05);
+    transition: transform 0.1s ease;
+}
+
+/* Button Click Effect */
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 5px 5px 10px rgba(0,0,0,0.3), 
+                inset -5px -5px 10px rgba(255,255,255,0.05);
+}
+
+/* Operators (+, -, *, /) Colors */
+.operator {
+    color: #00a8ff; /* Cyan/Blue text */
+}
+
+/* Equal Button (=) Style */
+.equal {
+    background-color: #00a8ff;
+    color: #fff;
+    border-radius: 50px; /* Thoda oval shape agar grid change karein, par yahan round hi rahega */
+}
+
+.equal:hover {
+    background-color: #0097e6;
+}
+
+/* AC aur DEL buttons specific styling */
+#clear, #delete {
+    color: #ff3f34; /* Red Text */
+}
+
+/* Zero button styling (Optional: Agar bada banana ho) */
+/* Grid ke hisab se zero abhi normal size hai, agar bada karna hai to neeche wala uncomment karein */
+/* 
+.zero {
+    grid-column: span 2;
+    border-radius: 50px;
+} 
+*/
