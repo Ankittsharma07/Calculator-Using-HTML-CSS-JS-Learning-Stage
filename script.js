@@ -21,17 +21,20 @@ Array.from(buttons).forEach((buttons) => {
         }
         else {
             let clicked = e.target.innerHTML;
+            let displayChar = clicked;
 
             if (clicked === '÷') {
                 String += '/';
+                displayChar = '÷';
             }
             else if (clicked === '×') {
                 String += '*';
+                displayChar = '×'; 
             }
             else {
                 String = String + clicked;
             }
-            document.querySelector('input').value = String;
+            document.querySelector('input').value += displayChar;
         }
 
     })
