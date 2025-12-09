@@ -1,5 +1,4 @@
 let String = "";
-let displayString = "";
 let buttons = document.querySelectorAll('.btn');
 
 Array.from(buttons).forEach((buttons) => {
@@ -25,16 +24,14 @@ Array.from(buttons).forEach((buttons) => {
 
             if (clicked === '÷') {
                 String += '/';
-                displayString += '÷';
             }
             else if (clicked === '×') {
                 String += '*';
-                displayString += '×';
             }
             else {
-                String += clicked;
+                String = String + clicked;
             }
-            document.querySelector('input').value = string;
+            document.querySelector('input').value = String;
         }
 
     })
